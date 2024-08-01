@@ -42,9 +42,9 @@ class ResNet18ForLocalization(nn.Module):
         class_outputs = self.fc3(x)
         return bbox_outputs, class_outputs
 
-device = 'cuda'    
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")     
 model = ResNet18ForLocalization().to(device)
-model.load_state_dict(torch.load('/home/polyakovk/ds_bootcamp_linux/CV-project/models/resnet_weight.pt'))
+model.load_state_dict(torch.load('models/resnet_weight.pt'))
 ind2class = {0: 'cucumber', 1: 'eggplant', 2: 'mushroom'}
     
 def load_image_from_url(url):
@@ -150,7 +150,7 @@ def plot_history(history, grid=True):
 def load_yolov5_model(model_path):
     # Загрузка кастомной модели YOLOv5
     model = torch.hub.load(
-        repo_or_dir='/home/polyakovk/ds_bootcamp_linux/proj2/yolov5',
+        repo_or_dir='https://github.com/ultralytics/yolov5',
         model='custom',
         path=model_path,
         source='local'

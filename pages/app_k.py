@@ -23,7 +23,7 @@ model_option = st.selectbox('Выберите модель', ['ResNet18', 'YOLOv
 if model_option == 'ResNet18':
     
     st.subheader('Dataset Information')
-    history = load_history('/home/polyakovk/ds_bootcamp_linux/CV-project/pages/training_history.json')
+    history = load_history('pages/training_history.json')
     buf = plot_history(history)
     st. image(buf)
     
@@ -55,9 +55,9 @@ if model_option == 'ResNet18':
 
 if model_option == 'YOLOv5':
     
-    img1 = Image.open('/home/polyakovk/ds_bootcamp_linux/CV-project/images/confusion_matrix_K.png')
-    img2 = Image.open('/home/polyakovk/ds_bootcamp_linux/CV-project/images/PR_curve_K.png')
-    img3 = Image.open('/home/polyakovk/ds_bootcamp_linux/CV-project/images/results_K.png')
+    img1 = Image.open('images/confusion_matrix_K.png')
+    img2 = Image.open('images/PR_curve_K.png')
+    img3 = Image.open('images/results_K.png')
     
     col1, col2, col3 = st.columns(3)
 
@@ -76,7 +76,7 @@ if model_option == 'YOLOv5':
     }
     st.write(dataset_info)
     
-    model_path = '/home/polyakovk/ds_bootcamp_linux/CV-project/models/best_k.pt'
+    model_path = 'models/best_k.pt'
     model = load_yolov5_model(model_path)
 
     option = st.selectbox('Выбери способ загрузки изображения', ['From URL', 'From File'])
