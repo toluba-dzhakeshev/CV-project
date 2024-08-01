@@ -10,9 +10,9 @@ st.title('YOLOv5')
 def get_model(conf):
     model = torch.hub.load(
         # будем работать с локальной моделью в текущей папке
-        repo_or_dir = './yolov5/',
+        repo_or_dir = './models/yolov5/',
         model = 'custom', 
-        path='best.pt', 
+        path='./models/best.pt', 
         source='local' 
         )
     model.eval()
