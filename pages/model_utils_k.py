@@ -44,7 +44,7 @@ class ResNet18ForLocalization(nn.Module):
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")     
 model = ResNet18ForLocalization().to(device)
-model.load_state_dict(torch.load('models/resnet_weight.pt'))
+model.load_state_dict(torch.load('models/resnet_weight.pt', map_location=torch.device('cpu')))
 ind2class = {0: 'cucumber', 1: 'eggplant', 2: 'mushroom'}
     
 def load_image_from_url(url):
