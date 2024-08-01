@@ -1,10 +1,4 @@
 
-streamlit 
-Pillow 
-torch 
-torchvision 
-matplotlib
-opencv-python
 absl-py==2.1.0
 aiogram==2.25.1
 aiohttp==3.8.6
@@ -100,8 +94,7 @@ nvidia-nccl-cu12==2.20.5
 nvidia-nvjitlink-cu12==12.5.82
 nvidia-nvtx-cu12==12.1.105
 omegaconf==2.3.0
-opencv-python==4.10.0.84
-opencv-python-headless==4.10.0.84
+opencv-python-headless
 optuna==3.6.1
 packaging==24.1
 pandas==2.2.2

@@ -150,7 +150,7 @@ def plot_history(history, grid=True):
 def load_yolov5_model(model_path):
     # Загрузка кастомной модели YOLOv5
     model = torch.hub.load(
-        repo_or_dir='https://github.com/ultralytics/yolov5',
+        repo_or_dir='models/yolov5',
         model='custom',
         path=model_path,
         source='local'
