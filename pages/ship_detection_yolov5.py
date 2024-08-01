@@ -39,3 +39,6 @@ with lcol:
 if results:
     with rcol:
         st.image(results.render())
+
+
+st.title('Results')
