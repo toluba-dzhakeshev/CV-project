@@ -10,6 +10,8 @@ import numpy as np
 
 import streamlit as st
 
+st.header('Semantic Segmentation with U-Net')
+
 st.header('Model Training Information')
 num_epochs = 15
 

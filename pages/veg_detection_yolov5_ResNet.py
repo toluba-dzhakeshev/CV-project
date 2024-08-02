@@ -185,6 +185,7 @@ def save_image_to_bytes(image):
 
     
     
+st.header('Object Localization in Veg Dataset (ResNet+YOLO)')
 
 st.title('Локализация огурчиков')
 

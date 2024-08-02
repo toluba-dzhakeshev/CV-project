@@ -4,6 +4,8 @@ from PIL import Image
 import requests
 from io import BytesIO
 
+st.header('Object Detection with YOLO')
+
 st.header('Model Training Information')
 
 # Информация о процессе обучения
