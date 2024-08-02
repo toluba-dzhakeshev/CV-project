@@ -119,7 +119,7 @@ pretrainedmodels==0.7.4
 prompt_toolkit==3.0.47
 prophet==1.1.5
 protobuf==4.25.4
-protobuf==5.27.3
+protobuf
 psutil==6.0.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
