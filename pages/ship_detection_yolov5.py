@@ -31,7 +31,7 @@ def get_model(conf):
     model = torch.hub.load(
         repo_or_dir='./models/yolov5/',
         model='custom',
-        path='./models/best_n.pt',
+        path='./models/yolov5/best_n.pt',
         source='local'
     )
     model.eval()
