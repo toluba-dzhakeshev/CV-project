@@ -8,6 +8,25 @@ from torchvision import transforms as T
 import segmentation_models_pytorch as smp
 import numpy as np
 
+import streamlit as st
+
+st.header('Model Training Information')
+num_epochs = 15
+
+st.write(f"Number of Epochs: {num_epochs}")
+st.write(f"Size of Train Dataset: {3500}, Validation: {600}, Test: {1000} images")
+st.write("Test loss: 0.397679 | Test IoU: 0.730058 | Test accuracy: 0.8155")
+
+acc_image_path = './images/tolu_acc.png'
+iou_image_path = './images/tolu_iou.png'
+loss_image_path = './images/tolu_loss.png'
+
+st.header('Training Performance Plots')
+
+st.image(acc_image_path, caption='Accuracy per Epoch', use_column_width=True)
+st.image(iou_image_path, caption='IoU per Epoch', use_column_width=True)
+st.image(loss_image_path, caption='Loss per Epoch', use_column_width=True)
+
 model = smp.Unet(encoder_name="mobilenet_v2", encoder_weights="imagenet", 
                  classes=1, activation=None, encoder_depth=5, decoder_channels=[512, 256, 64, 32, 16])
 
